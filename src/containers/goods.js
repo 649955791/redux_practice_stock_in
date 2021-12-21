@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addGoods } from '../actions'
+import { addGoods,decGoods } from '../actions'
 import Goods from '../components/goods'
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,9 +11,12 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: () => {
+    addGoods: () => {
       dispatch(addGoods(ownProps.id))
-    }
+    },
+    decGoods: () => {
+      dispatch(decGoods(ownProps.id))
+    },
   }
 }
 

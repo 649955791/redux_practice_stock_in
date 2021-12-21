@@ -2,13 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const StockList = ({ stockGoods }) => (
-  <ul>
-    {stockGoods.map(stock => 
-      <li key ={stock.id}>
-        {stock.name} * {stock.number}
-      </li>
+  <div>
+    <p>STOCK:</p>
+    <ul>
+      {stockGoods.map(stock =>
+        <li key={stock.id} style={{ position: 'relative', width: '380px' }}>
+          {stock.name} <span style={{ position: 'absolute', right: '0px' }}>*&emsp; {stock.number} </span>
+        </li>
       )}
-  </ul>
+    </ul>
+  </div>
 )
 
 

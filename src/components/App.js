@@ -1,4 +1,5 @@
 import React from 'react'
+import AddGoods from '../containers/addGoods';
 import GoodsListContainer from './../containers/goodsList';
 import StockListContainer from './../containers/stockList';
 
@@ -7,6 +8,8 @@ const App = () => (
     <GoodsListContainer />
     <hr/>
     <StockListContainer />
+    <hr/>
+    <AddGoods/>
   </div>
 )
 

@@ -4,20 +4,20 @@ import PropTypes from 'prop-types'
 
 const GoodsList = ({goodsList,onClick}) => (
   <div>
+    <p>ORDERS:</p>
     <ul>
       {goodsList.map(goods => (
         <GoodsContainer key={goods.id} {...goods} />
       ))}
     </ul>
-    <a
-      href=""
+    <button
       onClick={e => {
         e.preventDefault()
         onClick()
       }}
     >
       StockIn
-    </a>
+    </button>
   </div>
 )
 
